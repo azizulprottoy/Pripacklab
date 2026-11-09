@@ -12,6 +12,12 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Get.offAllNamed(RoutesPath.shell),
+        ),
+      ),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(

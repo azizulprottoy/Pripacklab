@@ -3,10 +3,8 @@ import 'package:get/get.dart';
 
 import '../../../app/routes/routes_path.dart';
 import '../../../res/theme/app_colors.dart';
-import '../../../shared/widgets/cart_icon_button.dart';
 import '../../../shared/widgets/loading_indicator.dart';
 import '../../../shared/widgets/main_bottom_nav.dart';
-import '../../auth/auth_controller.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/banner_carousel.dart';
 import '../widgets/category_grid.dart';
@@ -18,8 +16,6 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Get.find<AuthController>();
-
     ever(controller.ads, (_) {
       final ad = controller.popupAd;
       if (ad != null && !controller.popupDismissed.value) {
@@ -34,25 +30,8 @@ class HomeView extends GetView<HomeController> {
         title: const Text('PripackLab', style: TextStyle(fontWeight: FontWeight.w800)),
         actions: [
           IconButton(
-            onPressed: () => Get.toNamed(RoutesPath.about),
-            icon: const Icon(Icons.info_outline, color: AppColors.textMuted),
-          ),
-          IconButton(
             onPressed: () => Get.toNamed(RoutesPath.search),
             icon: const Icon(Icons.search, color: AppColors.textMuted),
-          ),
-          const CartIconButton(),
-          Obx(
-            () => auth.isLoggedIn
-                ? IconButton(
-                    onPressed: () => Get.toNamed(RoutesPath.profile),
-                    icon: const Icon(Icons.person_outline, color: AppColors.textMuted),
-                  )
-                : TextButton.icon(
-                    onPressed: () => Get.toNamed(RoutesPath.login),
-                    icon: const Icon(Icons.login, color: AppColors.textMuted, size: 20),
-                    label: const Text('Login', style: TextStyle(color: AppColors.textMuted)),
-                  ),
           ),
         ],
       ),
