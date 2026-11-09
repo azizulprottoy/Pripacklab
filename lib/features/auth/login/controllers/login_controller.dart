@@ -33,10 +33,6 @@ class LoginController extends GetxController {
       return;
     }
 
-    if (_authController.isSeller) {
-      Get.offAllNamed(RoutesPath.sellerProfile);
-    } else {
-      Get.offAllNamed(RoutesPath.shell);
-    }
+    Get.offAllNamed(RoutesPath.shell);
   }
 }

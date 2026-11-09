@@ -16,7 +16,6 @@ class AuthController extends GetxController {
   final RxBool isLoading = false.obs;
 
   bool get isLoggedIn => user.value != null;
-  bool get isSeller => user.value?.isSeller ?? false;
 
   @override
   void onInit() {

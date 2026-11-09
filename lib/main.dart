@@ -11,7 +11,6 @@ import 'features/cart/controllers/cart_controller.dart';
 import 'features/support_chat/controllers/support_chat_controller.dart';
 import 'features/support_chat/support_chat_repository.dart';
 import 'shared/repositories/category_repository.dart';
-import 'shared/repositories/geo_repository.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +19,6 @@ Future<void> main() async {
   Get.put<SessionStorage>(SessionStorage(), permanent: true);
   Get.put<DioClient>(DioClient(), permanent: true);
   Get.put<AuthRepository>(AuthRepository(), permanent: true);
-  Get.put<GeoRepository>(GeoRepository(), permanent: true);
   Get.put<CategoryRepository>(CategoryRepository(), permanent: true);
   Get.put<AuthController>(AuthController(), permanent: true);
   Get.put<CartController>(CartController(), permanent: true);

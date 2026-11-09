@@ -21,8 +21,6 @@ class SessionStorage extends GetxService {
 
   bool get isLoggedIn => token != null && user != null;
 
-  bool get isSeller => user?['atype'] == 'seller';
-
   Future<void> saveSession({
     required String token,
     required Map<String, dynamic> user,

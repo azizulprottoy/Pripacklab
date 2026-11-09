@@ -10,10 +10,14 @@ class AppConstants {
   /// the special `10.0.2.2` alias; iOS simulator/desktop use `localhost`
   /// directly. Override here when pointing at a deployed backend.
   static String get baseUrl {
-    if (kIsWeb) return 'http://localhost:5001';
-    if (Platform.isAndroid) return 'http://10.0.2.2:5001';
-    return 'http://localhost:5001';
+
+    return 'https://backapi.pripacklab.com';
   }
+  // static String get baseUrl {
+  //   if (kIsWeb) return 'http://localhost:5001';
+  //   if (Platform.isAndroid) return 'http://10.0.2.2:5001';
+  //   return 'http://localhost:5001';
+  // }
 
   /// The chat WebSocket is attached to the SAME http server as the REST API
   /// (see reacttempletebackend/index.js — one httpServer instance for both),

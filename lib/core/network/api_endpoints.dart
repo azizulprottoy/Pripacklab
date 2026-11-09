@@ -6,9 +6,6 @@ class ApiEndpoints {
   // Auth
   static const String customerLogin = '/customerlogin';
   static const String addCustomer = '/addcustomer';
-  static const String addSeller = '/addseller';
-  static const String editSeller = '/editseller'; // + /:id
-  static const String sellers = '/sellers';
 
   // Geo
   static const String divisions = '/divisions';
@@ -25,7 +22,6 @@ class ApiEndpoints {
   static const String addProduct = '/addproduct';
   static const String editProduct = '/editproduct'; // + /:id
   static const String delProduct = '/delproduct'; // + /:id
-  static const String sellerProducts = '/sellerproducts'; // + /:sellerId
 
   // Home / dashboard
   static const String getHome = '/gethome';
@@ -34,7 +30,6 @@ class ApiEndpoints {
   // Orders
   static const String placeOrder = '/placeorder';
   static const String getOrders = '/getorders'; // + /:customerId
-  static const String sellerOrders = '/sellerorders'; // + /:sellerId
   static const String orderStatus = '/order/status'; // + /:id
   static const String orderPaymentStatus = '/order/paymentstatus'; // + /:id
   static const String updateOrderPayment = '/updateorderpayment'; // + /:id

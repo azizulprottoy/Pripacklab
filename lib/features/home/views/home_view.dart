@@ -42,13 +42,17 @@ class HomeView extends GetView<HomeController> {
             icon: const Icon(Icons.search, color: AppColors.textMuted),
           ),
           const CartIconButton(),
-          IconButton(
-            onPressed: () => Get.toNamed(
-              auth.isLoggedIn
-                  ? (auth.isSeller ? RoutesPath.sellerProfile : RoutesPath.profile)
-                  : RoutesPath.login,
-            ),
-            icon: const Icon(Icons.person_outline, color: AppColors.textMuted),
+          Obx(
+            () => auth.isLoggedIn
+                ? IconButton(
+                    onPressed: () => Get.toNamed(RoutesPath.profile),
+                    icon: const Icon(Icons.person_outline, color: AppColors.textMuted),
+                  )
+                : TextButton.icon(
+                    onPressed: () => Get.toNamed(RoutesPath.login),
+                    icon: const Icon(Icons.login, color: AppColors.textMuted, size: 20),
+                    label: const Text('Login', style: TextStyle(color: AppColors.textMuted)),
+                  ),
           ),
         ],
       ),

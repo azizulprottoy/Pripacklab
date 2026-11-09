@@ -110,16 +110,6 @@ class LoginView extends GetView<LoginController> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 8),
-                  Center(
-                    child: GestureDetector(
-                      onTap: () => Get.toNamed(RoutesPath.sellerRegister),
-                      child: const Text(
-                        'Become a Seller',
-                        style: TextStyle(color: AppColors.indigo, fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),

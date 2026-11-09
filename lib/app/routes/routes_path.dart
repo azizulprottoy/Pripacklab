@@ -6,7 +6,6 @@ class RoutesPath {
   // Auth
   static const String login = '/login';
   static const String signup = '/signup';
-  static const String sellerRegister = '/seller-register';
 
   // Shell / browse
   static const String shell = '/';
@@ -26,10 +25,6 @@ class RoutesPath {
 
   // Profile / orders
   static const String profile = '/profile';
-
-  // Seller
-  static const String sellerProfile = '/seller-profile';
-  static const String sellerProductForm = '/seller-product-form';
 
   // Misc
   static const String about = '/about';

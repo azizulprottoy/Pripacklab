@@ -82,7 +82,7 @@ class MainBottomNav extends StatelessWidget {
           if (!auth.isLoggedIn) {
             Get.toNamed(RoutesPath.login);
           } else {
-            Get.toNamed(auth.isSeller ? RoutesPath.sellerProfile : RoutesPath.profile);
+            Get.toNamed(RoutesPath.profile);
           }
         }
     }

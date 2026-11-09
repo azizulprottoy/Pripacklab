@@ -1,5 +1,4 @@
-/// Shape returned by POST /customerlogin — same object for a regular
-/// customer or a seller (sellers get atype forced to 'seller' server-side).
+/// Shape returned by POST /customerlogin.
 class AppUser {
   final String userId;
   final String name;
@@ -24,8 +23,6 @@ class AppUser {
     this.subDistrict,
     this.services = const [],
   });
-
-  bool get isSeller => atype == 'seller';
 
   factory AppUser.fromJson(Map<String, dynamic> json) {
     return AppUser(
